@@ -1,0 +1,2 @@
+<?php include "db.php"; if(isset($_POST['register'])){ $u=$_POST['username']; $p=$_POST['password']; $conn->query("INSERT INTO users(username,password) VALUES('$u','$p')"); echo "Registered"; } ?>
+<h2>Register</h2><form method="POST"><input name="username"><br><input name="password"><br><button name="register">Register</button></form>

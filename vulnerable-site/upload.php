@@ -1,0 +1,2 @@
+<form method="POST" enctype="multipart/form-data"><input type="file" name="file"><button name="upload">Upload</button></form>
+<?php if(isset($_POST['upload'])){ $f="uploads/".$_FILES['file']['name']; move_uploaded_file($_FILES['file']['tmp_name'],$f); echo "Uploaded: <a href='$f'>$f</a>"; } ?>

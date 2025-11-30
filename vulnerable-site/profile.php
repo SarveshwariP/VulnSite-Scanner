@@ -1,0 +1,2 @@
+<?php include "db.php"; $id=$_GET['user']; $u=$conn->query("SELECT * FROM users WHERE id='$id'")->fetch_assoc(); ?>
+<h2>User Profile</h2>ID: <?= $u['id']; ?><br>Username: <?= $u['username']; ?><br>Password: <?= $u['password']; ?>

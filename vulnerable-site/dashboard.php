@@ -1,0 +1,2 @@
+<?php include "db.php"; $id=$_GET['user']; $r=$conn->query("SELECT username FROM users WHERE id='$id'")->fetch_assoc(); ?>
+<h2>Welcome <?= $r['username']; ?></h2><form><input name="msg"><button>Send</button></form><?= $_GET['msg'] ?? "" ?>
